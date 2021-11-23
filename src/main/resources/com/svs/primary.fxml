@@ -19,7 +19,7 @@
             <Font name="Calibri" size="17.0" />
          </font>
       </Text>
-      <Button fx:id="btnGreet" layoutX="157.0" layoutY="128.0" mnemonicParsing="false" onMouseClicked="#greetAction" style="-fx-background-color: #8CCB37;" text="Great!">
+      <Button fx:id="btnGreet" layoutX="157.0" layoutY="128.0" mnemonicParsing="false" onMouseClicked="#greetAction" style="-fx-background-color: #8CCB37;" text="Greet!">
          <font>
             <Font name="Arial" size="12.0" />
          </font>
