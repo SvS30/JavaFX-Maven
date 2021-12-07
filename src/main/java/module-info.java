@@ -1,4 +1,5 @@
 module com.svs {
+    requires transitive javafx.graphics;
     requires javafx.controls;
     requires javafx.fxml;
 
