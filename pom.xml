@@ -1,15 +1,35 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <!-- Artifact Information -->
     <groupId>com.svs</groupId>
     <artifactId>javafx-sample</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
+    <name>javafx-sample</name>
+    <description>Template de JavaFX app con pruebas automaticas.</description>
+    <url>https://github.com/SvS30/JavaFX-Maven</url>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
+    <!-- Dev Info -->
+    <developers>
+        <developer>
+            <id>svs</id>
+            <name>Salim Vazquez Solis</name>
+            <email>salimvzqz@gmail.com</email>
+            <organization>svs</organization>
+            <organizationUrl>https://svs30.github.io/Own-Blog/</organizationUrl>
+        </developer>
+    </developers>
     <dependencies>
         <dependency>
             <groupId>org.openjfx</groupId>
@@ -20,24 +40,12 @@
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
             <version>11</version>
-	</dependency>
-	<dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-graphics</artifactId>
-	    <version>11</version>
-	    <classifier>win</classifier>
         </dependency>
-	<dependency>
+        <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-graphics</artifactId>
-	    <version>11</version>
-	    <classifier>linux</classifier>
-        </dependency>
-	<dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-graphics</artifactId>
-	    <version>11</version>
-	    <classifier>mac</classifier>
+            <version>11</version>
+            <classifier>linux</classifier>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.testfx/testfx-core -->
         <dependency>
@@ -87,21 +95,23 @@
                 </configuration>
             </plugin>
             <plugin>
-		<artifactId>maven-jar-plugin</artifactId>
-		<executions>
-		    <execution>
-			<id>default-jar</id>
-			<phase>none</phase>
-		    </execution>
-		</executions>
-	    </plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.0.2</version>
+                <executions>
+                    <execution>
+                    <id>default-jar</id>
+                    <phase>none</phase>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>3.3.0</version>
                 <configuration>
                     <finalName>javafx-sample</finalName>
-		    <appendAssemblyId>false</appendAssemblyId>
+		            <appendAssemblyId>false</appendAssemblyId>
                     <archive>
                         <manifest>
                             <mainClass>com.svs.Main</mainClass>
