@@ -38,7 +38,7 @@ Este fase incluye `mvn compile` y `mvn test`.
 El `.jar` viene con los graficos de Linux.
 Si usted necesita ejecutar el `.jar` en:
 - Windows
-    - Modifique el `classifier` por `win` en la [linea 42](https://github.com/SvS30/JavaFX-Maven/blob/master/pom.xml#L42).
+    - Modifique el `classifier` por `win` en la [linea 48](https://github.com/SvS30/JavaFX-Maven/blob/master/pom.xml#L48).
     ```xml
         <dependency>
             <groupId>org.openjfx</groupId>
@@ -48,7 +48,7 @@ Si usted necesita ejecutar el `.jar` en:
         </dependency>
     ```
 - Mac
-    - Modifique el `classifier` por `mac` en la [linea 42](https://github.com/SvS30/JavaFX-Maven/blob/master/pom.xml#L42).
+    - Modifique el `classifier` por `mac` en la [linea 48](https://github.com/SvS30/JavaFX-Maven/blob/master/pom.xml#L48).
     ```xml
         <dependency>
             <groupId>org.openjfx</groupId>
